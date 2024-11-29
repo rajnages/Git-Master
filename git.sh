@@ -1,6 +1,11 @@
 #!/bin/bash
 
+# This script automates git operations for adding, committing and pushing changes
+# It first checks if the current directory is a git repository
+
 # Function to check if we're in a git repository
+# Uses git rev-parse to verify we're in a git working tree
+# Exits with error if not in a git repo
 check_git_repo() {
     if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
         echo "Error: Not a git repository"
@@ -9,6 +14,10 @@ check_git_repo() {
 }
 
 # Function to add and commit changes
+# Takes an optional commit message as parameter
+# If no message provided, uses default with current date
+# Stages all changes with git add .
+# Creates commit with provided/default message
 git_commit() {
     local commit_message="$1"
     if [ -z "$commit_message" ]; then
@@ -19,7 +28,10 @@ git_commit() {
     git commit -m "$commit_message"
 }
 
-# Function to push changes
+# Function to push changes to remote
+# Takes optional branch name parameter
+# Defaults to 'main' branch if none provided
+# Pushes to origin remote
 git_push() {
     local branch="$1"
     if [ -z "$branch" ]; then
@@ -29,13 +41,16 @@ git_push() {
     git push origin "$branch"
 }
 
-# Main script
+# Main script execution starts here
 check_git_repo
 
-# Get commit message from argument or use default
+# Get commit message from first script argument
+# Call git_commit with message
 commit_message="$1"
 git_commit "$commit_message"
 git_push "main"
+
+# Note: These lines appear redundant as they repeat operations already done above
 git add .
 git commit -m "First Commit"
 git push origin main
