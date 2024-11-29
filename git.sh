@@ -44,6 +44,8 @@ check_git_repo() {
 # Creates commit with provided/default message
 git_commit() {
     local commit_message="$1"
+    # This line checks if the commit_message variable is empty (zero length)
+    # -z is a test operator that returns true if the string length is zero
     if [ -z "$commit_message" ]; then
         commit_message="Update $(date +%Y-%m-%d)"
     fi
