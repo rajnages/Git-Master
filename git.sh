@@ -3,6 +3,30 @@
 # This script automates git operations for adding, committing and pushing changes
 # It first checks if the current directory is a git repository
 
+# Test cases:
+# 1. Test in non-git directory:
+#    cd /tmp && ./script.sh "test commit"
+#    Expected: Should show "Error: Not a git repository" and exit
+#
+# 2. Test with no commit message:
+#    ./script.sh
+#    Expected: Should use default commit message with current date
+#
+# 3. Test with custom commit message:
+#    ./script.sh "my custom commit message"
+#    Expected: Should use provided commit message
+#
+# 4. Test error handling:
+#    chmod -x script.sh
+#    ./script.sh
+#    Expected: Should fail with permission denied
+#
+# Run tests with:
+# mkdir test-repo && cd test-repo
+# git init
+# touch testfile
+# ../script.sh "test commit"
+
 # Function to check if we're in a git repository
 # Uses git rev-parse to verify we're in a git working tree
 # Exits with error if not in a git repo
