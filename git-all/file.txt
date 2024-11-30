@@ -1,0 +1,7 @@
+1.git add .; git commit -m "addd"; git push origin main
+2.git clone gitrepo
+3.git remote add origin git repo
+4.git checkout -b main
+5.git checkout dev
+6. git stash apply
+7.
