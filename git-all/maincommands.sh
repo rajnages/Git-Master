@@ -18,6 +18,9 @@ git status
 1. Changes not staged for commit: Modified files not yet added to the staging area.
 2. Untracked files: New files not yet tracked by Git.
 3. Changes to be committed: Changes already in the staging area.
+Working Directory  →  Staging Area  →  Repository (Committed)
+  (Modify files)         (git add)         (git commit)
+
 .gitignore # file tells Git which files/directories to ignore and not track
 
 git diff # show the differences between the working directory and the staging area
