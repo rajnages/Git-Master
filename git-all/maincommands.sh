@@ -5,6 +5,8 @@ git config --global user.email johndoe@example.com
 git config --global core.editor "code --wait"  # Set VS Code as default Git editor with --wait flag to block terminal until file is closed
 git config --list # check the settings again
 
+###########################################################################################################
+
 # using initialization using this command
 git init # create a new Git repository in the current directory(.git)
 # some commands like using after git init
@@ -24,6 +26,9 @@ Working Directory  →  Staging Area  →  Repository (Committed)
 .gitignore # file tells Git which files/directories to ignore and not track
 
 git diff # show the differences between the working directory and the staging area
+#This happens and showing only staging area
 git diff --staged # show the differences between the staging area and the repository
 git diff --cached # same as --staged
 git rev-parse --show-toplevel # show the root directory of the current Git repository
+
+git rm file => # The git rm file command is used to remove a file from both the working directory and the staging area in Git.
