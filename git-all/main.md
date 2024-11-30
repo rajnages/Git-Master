@@ -5,7 +5,8 @@ Git is a popular version control system(more specifically we can say that it is 
 GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, which provides distributed version control of access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project
 
 # Types version control systems
-
+1.vcs(version control system)
+2.apache 
 # Git repository structure:
 1.working directory
 2.staging area(index)
