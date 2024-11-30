@@ -14,4 +14,13 @@ git commit -m "Initial commit"
 # you can use git clone by remote repository by github
 git clone git_repo
 git status
+#This is showing three important steps
+1. Changes not staged for commit: Modified files not yet added to the staging area.
+2. Untracked files: New files not yet tracked by Git.
+3. Changes to be committed: Changes already in the staging area.
 .gitignore # file tells Git which files/directories to ignore and not track
+
+git diff # show the differences between the working directory and the staging area
+git diff --staged # show the differences between the staging area and the repository
+git diff --cached # same as --staged
+git rev-parse --show-toplevel # show the root directory of the current Git repository
